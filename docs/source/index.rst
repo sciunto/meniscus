@@ -8,8 +8,8 @@ Welcome to BibtexParser's documentation!
 
 
 :Author: François Boulogne
-:Download: `Stable version <http://source.sciunto.org/meniscus_cylinder`_
-:Developer's corner: `github.com project <https://github.com/sciunto/meniscus_cylinder>`_
+:Download: `Stable version <http://source.sciunto.org/meniscus`_
+:Developer's corner: `github.com project <https://github.com/sciunto/meniscus>`_
 :Generated: |today|
 :License: GPL v3
 :Version: |release|
