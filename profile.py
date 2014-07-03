@@ -32,10 +32,13 @@ def calculate_meniscus(tcl_position, pin_radius, theta=0, delta_z=0.5,
     :param tcl_position: z position of the TCL
     :param pin_radius: radius of the pin
     :param theta: contact angle, in degree
-    :param delta_z: estimated height difference between TCL and flat interface
+    :param delta_z: estimated height difference between TCL and flat interface.
     :param num_point: number of points for z
     :param slope_cutoff: maximum abs value for the slope r(z)
 
+    .. note::
+
+    `delta_z` is positive in the wetting case
     """
     # set space for altitudes
     z = np.linspace(tcl_position, tcl_position - delta_z, num_point)
@@ -84,7 +87,7 @@ if __name__ == '__main__':
     theta = 50
     delta_z = 1.8
 
-    z, y = shooter(0.25, 1.55, calculate_meniscus, radius, theta, delta_z, slope_cutoff=2e2)
+    z, y = shooter(0.25, 1.55, calculate_meniscus, radius, theta, delta_z, slope_cutoff=9e1)
 
     # Plot
     fig, (ax1, ax2) = plt.subplots(ncols=2, figsize=(10, 10))
@@ -95,7 +98,7 @@ if __name__ == '__main__':
     ax1.set_xlabel('z')
 
     ax2.plot(y[:, 0], z, 'ro')
-    ax2.plot(y[:,0], 1.0 * np.exp(-(y[:,0] - radius)))
+    #ax2.plot(y[:,0], 1.0 * np.exp(-(y[:,0] - radius)))
     ax2.set_title('profile')
     ax2.set_ylabel('z')
     ax2.set_xlabel('r')
