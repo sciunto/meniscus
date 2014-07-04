@@ -42,6 +42,10 @@ def calculate_meniscus(tcl_position, pin_radius, theta=0, delta_z=0.5,
     """
     # set space for altitudes
     z = np.linspace(tcl_position, tcl_position - delta_z, num_point)
+    # TODO try to be smarter for the space
+    #shift = -1.1 * (tcl_position - delta_z)
+    #z = np.logspace(np.log10(tcl_position + shift),
+    #                np.log10(tcl_position - delta_z + shift), num_point) - shift
     # Set the pin radius and the slope of the TCL
     slope = np.tan(theta * np.pi / 180.)
     r_init = np.array([pin_radius, -slope])
