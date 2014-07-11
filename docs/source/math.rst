@@ -31,7 +31,7 @@ To do so, we rewrite this 2nd order equation to two first order ODE:
 
     \frac{d\tilde{r}}{d\tilde{z}} = R
 
-    \frac{dR}{d\tilde{z}} = z (1+R^2)^{3/2} + \frac{1+R^2 }{\tilde{r}}
+    \frac{dR}{d\tilde{z}} = \tilde{z} (1+R^2)^{3/2} + \frac{1+R^2 }{\tilde{r}}
 
 
 Analytic cases
