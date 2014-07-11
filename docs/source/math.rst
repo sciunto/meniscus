@@ -23,15 +23,15 @@ Thus, we have to solve:
 
 .. math::
 
-    r'' = z (1+r'^2)^{3/2}  + (1+r'^2) / r
+    \tilde{r}'' = \tilde{z} (1+\tilde{r}'^2)^{3/2}  + (1+\tilde{r}'^2) / \tilde{r}
 
 To do so, we rewrite this 2nd order equation to two first order ODE:
 
 .. math::
 
-    \frac{dr}{dz} = R
+    \frac{d\tilde{r}}{d\tilde{z}} = R
 
-    \frac{dR}{dz} = z (1+R^2)^{3/2} + \frac{1+R^2 }{r}
+    \frac{dR}{d\tilde{z}} = z (1+R^2)^{3/2} + \frac{1+R^2 }{\tilde{r}}
 
 
 Analytic cases
